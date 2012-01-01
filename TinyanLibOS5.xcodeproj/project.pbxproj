@@ -1,0 +1,233 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		305D374914B006EB00C45ADC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 305D374814B006EB00C45ADC /* Foundation.framework */; };
+		305D374F14B006EB00C45ADC /* TinyanLibOS5.m in Sources */ = {isa = PBXBuildFile; fileRef = 305D374E14B006EB00C45ADC /* TinyanLibOS5.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		305D374514B006EB00C45ADC /* libTinyanLibOS5.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTinyanLibOS5.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		305D374814B006EB00C45ADC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		305D374C14B006EB00C45ADC /* TinyanLibOS5-Prefix.pch */ = {isa = PBXFileReference; path = "TinyanLibOS5-Prefix.pch"; sourceTree = "<group>"; };
+		305D374D14B006EB00C45ADC /* TinyanLibOS5.h */ = {isa = PBXFileReference; path = TinyanLibOS5.h; sourceTree = "<group>"; };
+		305D374E14B006EB00C45ADC /* TinyanLibOS5.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TinyanLibOS5.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		305D374214B006EB00C45ADC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				305D374914B006EB00C45ADC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		305D373A14B006EA00C45ADC = {
+			isa = PBXGroup;
+			children = (
+				305D374A14B006EB00C45ADC /* TinyanLibOS5 */,
+				305D374714B006EB00C45ADC /* Frameworks */,
+				305D374614B006EB00C45ADC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		305D374614B006EB00C45ADC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				305D374514B006EB00C45ADC /* libTinyanLibOS5.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		305D374714B006EB00C45ADC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				305D374814B006EB00C45ADC /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		305D374A14B006EB00C45ADC /* TinyanLibOS5 */ = {
+			isa = PBXGroup;
+			children = (
+				305D374D14B006EB00C45ADC /* TinyanLibOS5.h */,
+				305D374E14B006EB00C45ADC /* TinyanLibOS5.m */,
+				305D374B14B006EB00C45ADC /* Supporting Files */,
+			);
+			path = TinyanLibOS5;
+			sourceTree = "<group>";
+		};
+		305D374B14B006EB00C45ADC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				305D374C14B006EB00C45ADC /* TinyanLibOS5-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		305D374314B006EB00C45ADC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		305D374414B006EB00C45ADC /* TinyanLibOS5 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 305D375214B006EB00C45ADC /* Build configuration list for PBXNativeTarget "TinyanLibOS5" */;
+			buildPhases = (
+				305D374114B006EB00C45ADC /* Sources */,
+				305D374214B006EB00C45ADC /* Frameworks */,
+				305D374314B006EB00C45ADC /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TinyanLibOS5;
+			productName = TinyanLibOS5;
+			productReference = 305D374514B006EB00C45ADC /* libTinyanLibOS5.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		305D373C14B006EA00C45ADC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 305D373F14B006EA00C45ADC /* Build configuration list for PBXProject "TinyanLibOS5" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 305D373A14B006EA00C45ADC;
+			productRefGroup = 305D374614B006EB00C45ADC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				305D374414B006EB00C45ADC /* TinyanLibOS5 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		305D374114B006EB00C45ADC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				305D374F14B006EB00C45ADC /* TinyanLibOS5.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		305D375014B006EB00C45ADC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		305D375114B006EB00C45ADC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		305D375314B006EB00C45ADC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/TinyanLibOS5.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TinyanLibOS5/TinyanLibOS5-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		305D375414B006EB00C45ADC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/TinyanLibOS5.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TinyanLibOS5/TinyanLibOS5-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		305D373F14B006EA00C45ADC /* Build configuration list for PBXProject "TinyanLibOS5" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				305D375014B006EB00C45ADC /* Debug */,
+				305D375114B006EB00C45ADC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		305D375214B006EB00C45ADC /* Build configuration list for PBXNativeTarget "TinyanLibOS5" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				305D375314B006EB00C45ADC /* Debug */,
+				305D375414B006EB00C45ADC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 305D373C14B006EA00C45ADC /* Project object */;
+}
