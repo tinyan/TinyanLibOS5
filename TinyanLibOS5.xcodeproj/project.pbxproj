@@ -7,16 +7,132 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3041904C1695414F007418EF /* CCommonGeneral.h in Headers */ = {isa = PBXBuildFile; fileRef = 304190491695414F007418EF /* CCommonGeneral.h */; };
+		3041904D1695414F007418EF /* CCommonGeneral.m in Sources */ = {isa = PBXBuildFile; fileRef = 3041904A1695414F007418EF /* CCommonGeneral.m */; };
+		3041904E1695414F007418EF /* commonGeneralProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 3041904B1695414F007418EF /* commonGeneralProtocol.h */; };
+		30419052169542B1007418EF /* CCommonGame.h in Headers */ = {isa = PBXBuildFile; fileRef = 30419050169542B1007418EF /* CCommonGame.h */; };
+		30419053169542B1007418EF /* CCommonGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 30419051169542B1007418EF /* CCommonGame.m */; };
+		30419058169545D9007418EF /* CTouchBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 30419054169545D9007418EF /* CTouchBuffer.h */; };
+		30419059169545D9007418EF /* CTouchBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 30419055169545D9007418EF /* CTouchBuffer.m */; };
+		3041905A169545D9007418EF /* CTouchToGame.h in Headers */ = {isa = PBXBuildFile; fileRef = 30419056169545D9007418EF /* CTouchToGame.h */; };
+		3041905B169545D9007418EF /* CTouchToGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 30419057169545D9007418EF /* CTouchToGame.m */; };
+		3041905F16955304007418EF /* CCommonViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3041905D16955304007418EF /* CCommonViewController.h */; };
+		3041906016955304007418EF /* CCommonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3041905E16955304007418EF /* CCommonViewController.m */; };
+		3041906316963C4F007418EF /* CMyBoxUV.h in Headers */ = {isa = PBXBuildFile; fileRef = 3041906116963C4F007418EF /* CMyBoxUV.h */; };
+		3041906416963C4F007418EF /* CMyBoxUV.m in Sources */ = {isa = PBXBuildFile; fileRef = 3041906216963C4F007418EF /* CMyBoxUV.m */; };
+		3041906716967CE0007418EF /* CCommonDrawBufferVertexUV.h in Headers */ = {isa = PBXBuildFile; fileRef = 3041906516967CE0007418EF /* CCommonDrawBufferVertexUV.h */; };
+		3041906816967CE0007418EF /* CCommonDrawBufferVertexUV.m in Sources */ = {isa = PBXBuildFile; fileRef = 3041906616967CE0007418EF /* CCommonDrawBufferVertexUV.m */; };
+		3041907F16969D7F007418EF /* CMyMatrixUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 3041907D16969D7E007418EF /* CMyMatrixUtil.h */; };
+		3041908016969D7F007418EF /* CMyMatrixUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 3041907E16969D7E007418EF /* CMyMatrixUtil.m */; };
+		3043EF5116DB377A0081DA6D /* CCommonFont64.h in Headers */ = {isa = PBXBuildFile; fileRef = 3043EF4F16DB377A0081DA6D /* CCommonFont64.h */; };
+		3043EF5216DB377A0081DA6D /* CCommonFont64.m in Sources */ = {isa = PBXBuildFile; fileRef = 3043EF5016DB377A0081DA6D /* CCommonFont64.m */; };
+		3043EF5B16DC89090081DA6D /* CCommonFont.h in Headers */ = {isa = PBXBuildFile; fileRef = 3043EF5916DC89090081DA6D /* CCommonFont.h */; };
+		3043EF5C16DC89090081DA6D /* CCommonFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 3043EF5A16DC89090081DA6D /* CCommonFont.m */; };
+		3043EF5F16DC8B100081DA6D /* CCommonFont256.h in Headers */ = {isa = PBXBuildFile; fileRef = 3043EF5D16DC8B0F0081DA6D /* CCommonFont256.h */; };
+		3043EF6016DC8B100081DA6D /* CCommonFont256.m in Sources */ = {isa = PBXBuildFile; fileRef = 3043EF5E16DC8B100081DA6D /* CCommonFont256.m */; };
+		3043EF6316DC8C930081DA6D /* CCommonPrintFont.h in Headers */ = {isa = PBXBuildFile; fileRef = 3043EF6116DC8C930081DA6D /* CCommonPrintFont.h */; };
+		3043EF6416DC8C930081DA6D /* CCommonPrintFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 3043EF6216DC8C930081DA6D /* CCommonPrintFont.m */; };
+		3043EF6716DDE51C0081DA6D /* CCommonMusicPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3043EF6516DDE51C0081DA6D /* CCommonMusicPlayer.h */; };
+		3043EF6816DDE51C0081DA6D /* CCommonMusicPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3043EF6616DDE51C0081DA6D /* CCommonMusicPlayer.m */; };
 		305D374914B006EB00C45ADC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 305D374814B006EB00C45ADC /* Foundation.framework */; };
 		305D374F14B006EB00C45ADC /* TinyanLibOS5.m in Sources */ = {isa = PBXBuildFile; fileRef = 305D374E14B006EB00C45ADC /* TinyanLibOS5.m */; };
+		305D377014B1564F00C45ADC /* CMyCapture.h in Headers */ = {isa = PBXBuildFile; fileRef = 305D375914B1564F00C45ADC /* CMyCapture.h */; };
+		305D377114B1564F00C45ADC /* CMyCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 305D375A14B1564F00C45ADC /* CMyCapture.m */; };
+		305D377214B1564F00C45ADC /* CMyCaptureProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 305D375B14B1564F00C45ADC /* CMyCaptureProtocol.h */; };
+		305D377314B1564F00C45ADC /* CMyDDS.h in Headers */ = {isa = PBXBuildFile; fileRef = 305D375C14B1564F00C45ADC /* CMyDDS.h */; };
+		305D377414B1564F00C45ADC /* CMyDDS.m in Sources */ = {isa = PBXBuildFile; fileRef = 305D375D14B1564F00C45ADC /* CMyDDS.m */; };
+		305D377514B1564F00C45ADC /* CMyMachineModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 305D375E14B1564F00C45ADC /* CMyMachineModel.h */; };
+		305D377614B1564F00C45ADC /* CMyMachineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 305D375F14B1564F00C45ADC /* CMyMachineModel.m */; };
+		305D377714B1564F00C45ADC /* CMyPVR.h in Headers */ = {isa = PBXBuildFile; fileRef = 305D376014B1564F00C45ADC /* CMyPVR.h */; };
+		305D377814B1564F00C45ADC /* CMyPVR.m in Sources */ = {isa = PBXBuildFile; fileRef = 305D376114B1564F00C45ADC /* CMyPVR.m */; };
+		305D377914B1564F00C45ADC /* CMyShader.h in Headers */ = {isa = PBXBuildFile; fileRef = 305D376214B1564F00C45ADC /* CMyShader.h */; };
+		305D377A14B1564F00C45ADC /* CMyShader.m in Sources */ = {isa = PBXBuildFile; fileRef = 305D376314B1564F00C45ADC /* CMyShader.m */; };
+		305D377B14B1564F00C45ADC /* CMyTexture.h in Headers */ = {isa = PBXBuildFile; fileRef = 305D376414B1564F00C45ADC /* CMyTexture.h */; };
+		305D377C14B1564F00C45ADC /* CMyTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 305D376514B1564F00C45ADC /* CMyTexture.m */; };
+		305D377D14B1564F00C45ADC /* myRender.h in Headers */ = {isa = PBXBuildFile; fileRef = 305D376614B1564F00C45ADC /* myRender.h */; };
+		305D377E14B1564F00C45ADC /* myRender.m in Sources */ = {isa = PBXBuildFile; fileRef = 305D376714B1564F00C45ADC /* myRender.m */; };
+		305D377F14B1564F00C45ADC /* OAL3DVector.h in Headers */ = {isa = PBXBuildFile; fileRef = 305D376814B1564F00C45ADC /* OAL3DVector.h */; };
+		305D378014B1564F00C45ADC /* OAL3DVector.m in Sources */ = {isa = PBXBuildFile; fileRef = 305D376914B1564F00C45ADC /* OAL3DVector.m */; };
+		305D378114B1564F00C45ADC /* OALControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 305D376A14B1564F00C45ADC /* OALControl.h */; };
+		305D378214B1564F00C45ADC /* OALControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 305D376B14B1564F00C45ADC /* OALControl.m */; };
+		305D378314B1564F00C45ADC /* OALData.h in Headers */ = {isa = PBXBuildFile; fileRef = 305D376C14B1564F00C45ADC /* OALData.h */; };
+		305D378414B1564F00C45ADC /* OALData.m in Sources */ = {isa = PBXBuildFile; fileRef = 305D376D14B1564F00C45ADC /* OALData.m */; };
+		305D378514B1564F00C45ADC /* playSound.h in Headers */ = {isa = PBXBuildFile; fileRef = 305D376E14B1564F00C45ADC /* playSound.h */; };
+		305D378614B1564F00C45ADC /* playSound.m in Sources */ = {isa = PBXBuildFile; fileRef = 305D376F14B1564F00C45ADC /* playSound.m */; };
+		3063AA1016C03ED4005614E7 /* CCommonSoundControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 3063AA0E16C03ED4005614E7 /* CCommonSoundControl.h */; };
+		3063AA1116C03ED4005614E7 /* CCommonSoundControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 3063AA0F16C03ED4005614E7 /* CCommonSoundControl.m */; };
+		3063AA1616C188E6005614E7 /* CCommonBannerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3063AA1416C188E6005614E7 /* CCommonBannerViewController.h */; };
+		3063AA1716C188E6005614E7 /* CCommonBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3063AA1516C188E6005614E7 /* CCommonBannerViewController.m */; };
+		3063AA1A16C19249005614E7 /* CCommonAppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3063AA1816C19249005614E7 /* CCommonAppDelegate.h */; };
+		3063AA1B16C19249005614E7 /* CCommonAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3063AA1916C19249005614E7 /* CCommonAppDelegate.m */; };
+		30F4D84016AFBB97003903E0 /* CCreateGLMatrix.h in Headers */ = {isa = PBXBuildFile; fileRef = 30F4D83E16AFBB97003903E0 /* CCreateGLMatrix.h */; };
+		30F4D84116AFBB97003903E0 /* CCreateGLMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = 30F4D83F16AFBB97003903E0 /* CCreateGLMatrix.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		304190491695414F007418EF /* CCommonGeneral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCommonGeneral.h; path = classes/CCommonGeneral.h; sourceTree = SOURCE_ROOT; };
+		3041904A1695414F007418EF /* CCommonGeneral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCommonGeneral.m; path = classes/CCommonGeneral.m; sourceTree = SOURCE_ROOT; };
+		3041904B1695414F007418EF /* commonGeneralProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = commonGeneralProtocol.h; path = classes/commonGeneralProtocol.h; sourceTree = SOURCE_ROOT; };
+		30419050169542B1007418EF /* CCommonGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCommonGame.h; path = classes/CCommonGame.h; sourceTree = SOURCE_ROOT; };
+		30419051169542B1007418EF /* CCommonGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCommonGame.m; path = classes/CCommonGame.m; sourceTree = SOURCE_ROOT; };
+		30419054169545D9007418EF /* CTouchBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTouchBuffer.h; path = classes/CTouchBuffer.h; sourceTree = SOURCE_ROOT; };
+		30419055169545D9007418EF /* CTouchBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTouchBuffer.m; path = classes/CTouchBuffer.m; sourceTree = SOURCE_ROOT; };
+		30419056169545D9007418EF /* CTouchToGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTouchToGame.h; path = classes/CTouchToGame.h; sourceTree = SOURCE_ROOT; };
+		30419057169545D9007418EF /* CTouchToGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTouchToGame.m; path = classes/CTouchToGame.m; sourceTree = SOURCE_ROOT; };
+		3041905D16955304007418EF /* CCommonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCommonViewController.h; path = classes/CCommonViewController.h; sourceTree = SOURCE_ROOT; };
+		3041905E16955304007418EF /* CCommonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCommonViewController.m; path = classes/CCommonViewController.m; sourceTree = SOURCE_ROOT; };
+		3041906116963C4F007418EF /* CMyBoxUV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMyBoxUV.h; path = classes/CMyBoxUV.h; sourceTree = SOURCE_ROOT; };
+		3041906216963C4F007418EF /* CMyBoxUV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMyBoxUV.m; path = classes/CMyBoxUV.m; sourceTree = SOURCE_ROOT; };
+		3041906516967CE0007418EF /* CCommonDrawBufferVertexUV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCommonDrawBufferVertexUV.h; path = classes/CCommonDrawBufferVertexUV.h; sourceTree = SOURCE_ROOT; };
+		3041906616967CE0007418EF /* CCommonDrawBufferVertexUV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCommonDrawBufferVertexUV.m; path = classes/CCommonDrawBufferVertexUV.m; sourceTree = SOURCE_ROOT; };
+		3041907D16969D7E007418EF /* CMyMatrixUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMyMatrixUtil.h; path = classes/CMyMatrixUtil.h; sourceTree = SOURCE_ROOT; };
+		3041907E16969D7E007418EF /* CMyMatrixUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMyMatrixUtil.m; path = classes/CMyMatrixUtil.m; sourceTree = SOURCE_ROOT; };
+		3043EF4F16DB377A0081DA6D /* CCommonFont64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCommonFont64.h; path = classes/CCommonFont64.h; sourceTree = "<group>"; };
+		3043EF5016DB377A0081DA6D /* CCommonFont64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCommonFont64.m; path = classes/CCommonFont64.m; sourceTree = "<group>"; };
+		3043EF5916DC89090081DA6D /* CCommonFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCommonFont.h; path = classes/CCommonFont.h; sourceTree = "<group>"; };
+		3043EF5A16DC89090081DA6D /* CCommonFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCommonFont.m; path = classes/CCommonFont.m; sourceTree = "<group>"; };
+		3043EF5D16DC8B0F0081DA6D /* CCommonFont256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCommonFont256.h; path = classes/CCommonFont256.h; sourceTree = "<group>"; };
+		3043EF5E16DC8B100081DA6D /* CCommonFont256.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCommonFont256.m; path = classes/CCommonFont256.m; sourceTree = "<group>"; };
+		3043EF6116DC8C930081DA6D /* CCommonPrintFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCommonPrintFont.h; path = classes/CCommonPrintFont.h; sourceTree = "<group>"; };
+		3043EF6216DC8C930081DA6D /* CCommonPrintFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCommonPrintFont.m; path = classes/CCommonPrintFont.m; sourceTree = "<group>"; };
+		3043EF6516DDE51C0081DA6D /* CCommonMusicPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCommonMusicPlayer.h; path = classes/CCommonMusicPlayer.h; sourceTree = "<group>"; };
+		3043EF6616DDE51C0081DA6D /* CCommonMusicPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCommonMusicPlayer.m; path = classes/CCommonMusicPlayer.m; sourceTree = "<group>"; };
 		305D374514B006EB00C45ADC /* libTinyanLibOS5.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTinyanLibOS5.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		305D374814B006EB00C45ADC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		305D374C14B006EB00C45ADC /* TinyanLibOS5-Prefix.pch */ = {isa = PBXFileReference; path = "TinyanLibOS5-Prefix.pch"; sourceTree = "<group>"; };
-		305D374D14B006EB00C45ADC /* TinyanLibOS5.h */ = {isa = PBXFileReference; path = TinyanLibOS5.h; sourceTree = "<group>"; };
+		305D374C14B006EB00C45ADC /* TinyanLibOS5-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TinyanLibOS5-Prefix.pch"; sourceTree = "<group>"; };
+		305D374D14B006EB00C45ADC /* TinyanLibOS5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TinyanLibOS5.h; sourceTree = "<group>"; };
 		305D374E14B006EB00C45ADC /* TinyanLibOS5.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TinyanLibOS5.m; sourceTree = "<group>"; };
+		305D375914B1564F00C45ADC /* CMyCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMyCapture.h; path = classes/CMyCapture.h; sourceTree = SOURCE_ROOT; };
+		305D375A14B1564F00C45ADC /* CMyCapture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMyCapture.m; path = classes/CMyCapture.m; sourceTree = SOURCE_ROOT; };
+		305D375B14B1564F00C45ADC /* CMyCaptureProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMyCaptureProtocol.h; path = classes/CMyCaptureProtocol.h; sourceTree = SOURCE_ROOT; };
+		305D375C14B1564F00C45ADC /* CMyDDS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMyDDS.h; path = classes/CMyDDS.h; sourceTree = SOURCE_ROOT; };
+		305D375D14B1564F00C45ADC /* CMyDDS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMyDDS.m; path = classes/CMyDDS.m; sourceTree = SOURCE_ROOT; };
+		305D375E14B1564F00C45ADC /* CMyMachineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMyMachineModel.h; path = classes/CMyMachineModel.h; sourceTree = SOURCE_ROOT; };
+		305D375F14B1564F00C45ADC /* CMyMachineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMyMachineModel.m; path = classes/CMyMachineModel.m; sourceTree = SOURCE_ROOT; };
+		305D376014B1564F00C45ADC /* CMyPVR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMyPVR.h; path = classes/CMyPVR.h; sourceTree = SOURCE_ROOT; };
+		305D376114B1564F00C45ADC /* CMyPVR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMyPVR.m; path = classes/CMyPVR.m; sourceTree = SOURCE_ROOT; };
+		305D376214B1564F00C45ADC /* CMyShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMyShader.h; path = classes/CMyShader.h; sourceTree = SOURCE_ROOT; };
+		305D376314B1564F00C45ADC /* CMyShader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMyShader.m; path = classes/CMyShader.m; sourceTree = SOURCE_ROOT; };
+		305D376414B1564F00C45ADC /* CMyTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMyTexture.h; path = classes/CMyTexture.h; sourceTree = SOURCE_ROOT; };
+		305D376514B1564F00C45ADC /* CMyTexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMyTexture.m; path = classes/CMyTexture.m; sourceTree = SOURCE_ROOT; };
+		305D376614B1564F00C45ADC /* myRender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = myRender.h; path = classes/myRender.h; sourceTree = SOURCE_ROOT; };
+		305D376714B1564F00C45ADC /* myRender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = myRender.m; path = classes/myRender.m; sourceTree = SOURCE_ROOT; };
+		305D376814B1564F00C45ADC /* OAL3DVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OAL3DVector.h; path = classes/OAL3DVector.h; sourceTree = SOURCE_ROOT; };
+		305D376914B1564F00C45ADC /* OAL3DVector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OAL3DVector.m; path = classes/OAL3DVector.m; sourceTree = SOURCE_ROOT; };
+		305D376A14B1564F00C45ADC /* OALControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OALControl.h; path = classes/OALControl.h; sourceTree = SOURCE_ROOT; };
+		305D376B14B1564F00C45ADC /* OALControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OALControl.m; path = classes/OALControl.m; sourceTree = SOURCE_ROOT; };
+		305D376C14B1564F00C45ADC /* OALData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OALData.h; path = classes/OALData.h; sourceTree = SOURCE_ROOT; };
+		305D376D14B1564F00C45ADC /* OALData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OALData.m; path = classes/OALData.m; sourceTree = SOURCE_ROOT; };
+		305D376E14B1564F00C45ADC /* playSound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = playSound.h; path = classes/playSound.h; sourceTree = SOURCE_ROOT; };
+		305D376F14B1564F00C45ADC /* playSound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = playSound.m; path = classes/playSound.m; sourceTree = SOURCE_ROOT; };
+		3063AA0E16C03ED4005614E7 /* CCommonSoundControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCommonSoundControl.h; path = classes/CCommonSoundControl.h; sourceTree = "<group>"; };
+		3063AA0F16C03ED4005614E7 /* CCommonSoundControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCommonSoundControl.m; path = classes/CCommonSoundControl.m; sourceTree = "<group>"; };
+		3063AA1416C188E6005614E7 /* CCommonBannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCommonBannerViewController.h; path = classes/CCommonBannerViewController.h; sourceTree = "<group>"; };
+		3063AA1516C188E6005614E7 /* CCommonBannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCommonBannerViewController.m; path = classes/CCommonBannerViewController.m; sourceTree = "<group>"; };
+		3063AA1816C19249005614E7 /* CCommonAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCommonAppDelegate.h; path = classes/CCommonAppDelegate.h; sourceTree = "<group>"; };
+		3063AA1916C19249005614E7 /* CCommonAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCommonAppDelegate.m; path = classes/CCommonAppDelegate.m; sourceTree = "<group>"; };
+		30F4D83E16AFBB97003903E0 /* CCreateGLMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCreateGLMatrix.h; path = classes/CCreateGLMatrix.h; sourceTree = "<group>"; };
+		30F4D83F16AFBB97003903E0 /* CCreateGLMatrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCreateGLMatrix.m; path = classes/CCreateGLMatrix.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,9 +147,83 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3041908116969D9A007418EF /* source */ = {
+			isa = PBXGroup;
+			children = (
+				3041906616967CE0007418EF /* CCommonDrawBufferVertexUV.m */,
+				3041905E16955304007418EF /* CCommonViewController.m */,
+				3063AA0F16C03ED4005614E7 /* CCommonSoundControl.m */,
+				3063AA1516C188E6005614E7 /* CCommonBannerViewController.m */,
+				30419055169545D9007418EF /* CTouchBuffer.m */,
+				30419057169545D9007418EF /* CTouchToGame.m */,
+				30419051169542B1007418EF /* CCommonGame.m */,
+				3041904A1695414F007418EF /* CCommonGeneral.m */,
+				305D375A14B1564F00C45ADC /* CMyCapture.m */,
+				305D375D14B1564F00C45ADC /* CMyDDS.m */,
+				305D375F14B1564F00C45ADC /* CMyMachineModel.m */,
+				305D376114B1564F00C45ADC /* CMyPVR.m */,
+				305D376314B1564F00C45ADC /* CMyShader.m */,
+				305D376514B1564F00C45ADC /* CMyTexture.m */,
+				305D376714B1564F00C45ADC /* myRender.m */,
+				305D376914B1564F00C45ADC /* OAL3DVector.m */,
+				305D376B14B1564F00C45ADC /* OALControl.m */,
+				305D376D14B1564F00C45ADC /* OALData.m */,
+				305D376F14B1564F00C45ADC /* playSound.m */,
+				3041906216963C4F007418EF /* CMyBoxUV.m */,
+				3041907E16969D7E007418EF /* CMyMatrixUtil.m */,
+				30F4D83F16AFBB97003903E0 /* CCreateGLMatrix.m */,
+				3063AA1916C19249005614E7 /* CCommonAppDelegate.m */,
+				3043EF5016DB377A0081DA6D /* CCommonFont64.m */,
+				3043EF5A16DC89090081DA6D /* CCommonFont.m */,
+				3043EF5E16DC8B100081DA6D /* CCommonFont256.m */,
+				3043EF6216DC8C930081DA6D /* CCommonPrintFont.m */,
+				3043EF6616DDE51C0081DA6D /* CCommonMusicPlayer.m */,
+			);
+			name = source;
+			sourceTree = "<group>";
+		};
+		3041908216969DA7007418EF /* header */ = {
+			isa = PBXGroup;
+			children = (
+				3041906516967CE0007418EF /* CCommonDrawBufferVertexUV.h */,
+				3041905D16955304007418EF /* CCommonViewController.h */,
+				3063AA1416C188E6005614E7 /* CCommonBannerViewController.h */,
+				30419054169545D9007418EF /* CTouchBuffer.h */,
+				30419056169545D9007418EF /* CTouchToGame.h */,
+				30419050169542B1007418EF /* CCommonGame.h */,
+				304190491695414F007418EF /* CCommonGeneral.h */,
+				3041904B1695414F007418EF /* commonGeneralProtocol.h */,
+				305D375914B1564F00C45ADC /* CMyCapture.h */,
+				305D375B14B1564F00C45ADC /* CMyCaptureProtocol.h */,
+				305D375C14B1564F00C45ADC /* CMyDDS.h */,
+				305D375E14B1564F00C45ADC /* CMyMachineModel.h */,
+				305D376014B1564F00C45ADC /* CMyPVR.h */,
+				305D376214B1564F00C45ADC /* CMyShader.h */,
+				305D376414B1564F00C45ADC /* CMyTexture.h */,
+				305D376614B1564F00C45ADC /* myRender.h */,
+				305D376814B1564F00C45ADC /* OAL3DVector.h */,
+				305D376A14B1564F00C45ADC /* OALControl.h */,
+				305D376C14B1564F00C45ADC /* OALData.h */,
+				305D376E14B1564F00C45ADC /* playSound.h */,
+				3041906116963C4F007418EF /* CMyBoxUV.h */,
+				3041907D16969D7E007418EF /* CMyMatrixUtil.h */,
+				30F4D83E16AFBB97003903E0 /* CCreateGLMatrix.h */,
+				3063AA0E16C03ED4005614E7 /* CCommonSoundControl.h */,
+				3063AA1816C19249005614E7 /* CCommonAppDelegate.h */,
+				3043EF4F16DB377A0081DA6D /* CCommonFont64.h */,
+				3043EF5D16DC8B0F0081DA6D /* CCommonFont256.h */,
+				3043EF5916DC89090081DA6D /* CCommonFont.h */,
+				3043EF6116DC8C930081DA6D /* CCommonPrintFont.h */,
+				3043EF6516DDE51C0081DA6D /* CCommonMusicPlayer.h */,
+			);
+			name = header;
+			sourceTree = "<group>";
+		};
 		305D373A14B006EA00C45ADC = {
 			isa = PBXGroup;
 			children = (
+				3041908216969DA7007418EF /* header */,
+				3041908116969D9A007418EF /* source */,
 				305D374A14B006EB00C45ADC /* TinyanLibOS5 */,
 				305D374714B006EB00C45ADC /* Frameworks */,
 				305D374614B006EB00C45ADC /* Products */,
@@ -59,8 +249,8 @@
 		305D374A14B006EB00C45ADC /* TinyanLibOS5 */ = {
 			isa = PBXGroup;
 			children = (
-				305D374D14B006EB00C45ADC /* TinyanLibOS5.h */,
 				305D374E14B006EB00C45ADC /* TinyanLibOS5.m */,
+				305D374D14B006EB00C45ADC /* TinyanLibOS5.h */,
 				305D374B14B006EB00C45ADC /* Supporting Files */,
 			);
 			path = TinyanLibOS5;
@@ -81,6 +271,36 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				305D377014B1564F00C45ADC /* CMyCapture.h in Headers */,
+				305D377214B1564F00C45ADC /* CMyCaptureProtocol.h in Headers */,
+				305D377314B1564F00C45ADC /* CMyDDS.h in Headers */,
+				305D377514B1564F00C45ADC /* CMyMachineModel.h in Headers */,
+				305D377714B1564F00C45ADC /* CMyPVR.h in Headers */,
+				305D377914B1564F00C45ADC /* CMyShader.h in Headers */,
+				305D377B14B1564F00C45ADC /* CMyTexture.h in Headers */,
+				305D377D14B1564F00C45ADC /* myRender.h in Headers */,
+				305D377F14B1564F00C45ADC /* OAL3DVector.h in Headers */,
+				305D378114B1564F00C45ADC /* OALControl.h in Headers */,
+				305D378314B1564F00C45ADC /* OALData.h in Headers */,
+				305D378514B1564F00C45ADC /* playSound.h in Headers */,
+				3041904C1695414F007418EF /* CCommonGeneral.h in Headers */,
+				3041904E1695414F007418EF /* commonGeneralProtocol.h in Headers */,
+				30419052169542B1007418EF /* CCommonGame.h in Headers */,
+				30419058169545D9007418EF /* CTouchBuffer.h in Headers */,
+				3041905A169545D9007418EF /* CTouchToGame.h in Headers */,
+				3041905F16955304007418EF /* CCommonViewController.h in Headers */,
+				3041906316963C4F007418EF /* CMyBoxUV.h in Headers */,
+				3041906716967CE0007418EF /* CCommonDrawBufferVertexUV.h in Headers */,
+				3041907F16969D7F007418EF /* CMyMatrixUtil.h in Headers */,
+				30F4D84016AFBB97003903E0 /* CCreateGLMatrix.h in Headers */,
+				3063AA1016C03ED4005614E7 /* CCommonSoundControl.h in Headers */,
+				3063AA1616C188E6005614E7 /* CCommonBannerViewController.h in Headers */,
+				3063AA1A16C19249005614E7 /* CCommonAppDelegate.h in Headers */,
+				3043EF5116DB377A0081DA6D /* CCommonFont64.h in Headers */,
+				3043EF5B16DC89090081DA6D /* CCommonFont.h in Headers */,
+				3043EF5F16DC8B100081DA6D /* CCommonFont256.h in Headers */,
+				3043EF6316DC8C930081DA6D /* CCommonPrintFont.h in Headers */,
+				3043EF6716DDE51C0081DA6D /* CCommonMusicPlayer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,7 +330,7 @@
 		305D373C14B006EA00C45ADC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0460;
 			};
 			buildConfigurationList = 305D373F14B006EA00C45ADC /* Build configuration list for PBXProject "TinyanLibOS5" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -135,6 +355,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				305D374F14B006EB00C45ADC /* TinyanLibOS5.m in Sources */,
+				305D377114B1564F00C45ADC /* CMyCapture.m in Sources */,
+				305D377414B1564F00C45ADC /* CMyDDS.m in Sources */,
+				305D377614B1564F00C45ADC /* CMyMachineModel.m in Sources */,
+				305D377814B1564F00C45ADC /* CMyPVR.m in Sources */,
+				305D377A14B1564F00C45ADC /* CMyShader.m in Sources */,
+				305D377C14B1564F00C45ADC /* CMyTexture.m in Sources */,
+				305D377E14B1564F00C45ADC /* myRender.m in Sources */,
+				305D378014B1564F00C45ADC /* OAL3DVector.m in Sources */,
+				305D378214B1564F00C45ADC /* OALControl.m in Sources */,
+				305D378414B1564F00C45ADC /* OALData.m in Sources */,
+				305D378614B1564F00C45ADC /* playSound.m in Sources */,
+				3041904D1695414F007418EF /* CCommonGeneral.m in Sources */,
+				30419053169542B1007418EF /* CCommonGame.m in Sources */,
+				30419059169545D9007418EF /* CTouchBuffer.m in Sources */,
+				3041905B169545D9007418EF /* CTouchToGame.m in Sources */,
+				3041906016955304007418EF /* CCommonViewController.m in Sources */,
+				3041906416963C4F007418EF /* CMyBoxUV.m in Sources */,
+				3041906816967CE0007418EF /* CCommonDrawBufferVertexUV.m in Sources */,
+				3041908016969D7F007418EF /* CMyMatrixUtil.m in Sources */,
+				30F4D84116AFBB97003903E0 /* CCreateGLMatrix.m in Sources */,
+				3063AA1116C03ED4005614E7 /* CCommonSoundControl.m in Sources */,
+				3063AA1716C188E6005614E7 /* CCommonBannerViewController.m in Sources */,
+				3063AA1B16C19249005614E7 /* CCommonAppDelegate.m in Sources */,
+				3043EF5216DB377A0081DA6D /* CCommonFont64.m in Sources */,
+				3043EF5C16DC89090081DA6D /* CCommonFont.m in Sources */,
+				3043EF6016DC8B100081DA6D /* CCommonFont256.m in Sources */,
+				3043EF6416DC8C930081DA6D /* CCommonPrintFont.m in Sources */,
+				3043EF6816DDE51C0081DA6D /* CCommonMusicPlayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +395,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -159,6 +411,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
@@ -171,11 +424,16 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
@@ -186,10 +444,12 @@
 		305D375314B006EB00C45ADC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CONFIGURATION_TEMP_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				DSTROOT = /tmp/TinyanLibOS5.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TinyanLibOS5/TinyanLibOS5-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
+				PLIST_FILE_OUTPUT_FORMAT = "same-as-input";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -198,10 +458,12 @@
 		305D375414B006EB00C45ADC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CONFIGURATION_TEMP_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				DSTROOT = /tmp/TinyanLibOS5.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TinyanLibOS5/TinyanLibOS5-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
+				PLIST_FILE_OUTPUT_FORMAT = "same-as-input";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -226,6 +488,7 @@
 				305D375414B006EB00C45ADC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
