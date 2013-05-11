@@ -2,7 +2,7 @@
 //  ViewController.m
 //  comike2011win
 //
-//  Created by 山口 慎治 on 11/12/04.
+//  Created by たいにゃん on 11/12/04.
 //  Copyright (c) 2011年 __MyCompanyName__. All rights reserved.
 //
 

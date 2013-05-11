@@ -65,6 +65,8 @@
 		3063AA1716C188E6005614E7 /* CCommonBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3063AA1516C188E6005614E7 /* CCommonBannerViewController.m */; };
 		3063AA1A16C19249005614E7 /* CCommonAppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3063AA1816C19249005614E7 /* CCommonAppDelegate.h */; };
 		3063AA1B16C19249005614E7 /* CCommonAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3063AA1916C19249005614E7 /* CCommonAppDelegate.m */; };
+		30B70CA81726724A003DA384 /* CMyDebugMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 30B70CA61726724A003DA384 /* CMyDebugMessage.h */; };
+		30B70CA91726724A003DA384 /* CMyDebugMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B70CA71726724A003DA384 /* CMyDebugMessage.m */; };
 		30F4D84016AFBB97003903E0 /* CCreateGLMatrix.h in Headers */ = {isa = PBXBuildFile; fileRef = 30F4D83E16AFBB97003903E0 /* CCreateGLMatrix.h */; };
 		30F4D84116AFBB97003903E0 /* CCreateGLMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = 30F4D83F16AFBB97003903E0 /* CCreateGLMatrix.m */; };
 /* End PBXBuildFile section */
@@ -131,6 +133,8 @@
 		3063AA1516C188E6005614E7 /* CCommonBannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCommonBannerViewController.m; path = classes/CCommonBannerViewController.m; sourceTree = "<group>"; };
 		3063AA1816C19249005614E7 /* CCommonAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCommonAppDelegate.h; path = classes/CCommonAppDelegate.h; sourceTree = "<group>"; };
 		3063AA1916C19249005614E7 /* CCommonAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCommonAppDelegate.m; path = classes/CCommonAppDelegate.m; sourceTree = "<group>"; };
+		30B70CA61726724A003DA384 /* CMyDebugMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMyDebugMessage.h; path = classes/CMyDebugMessage.h; sourceTree = "<group>"; };
+		30B70CA71726724A003DA384 /* CMyDebugMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMyDebugMessage.m; path = classes/CMyDebugMessage.m; sourceTree = "<group>"; };
 		30F4D83E16AFBB97003903E0 /* CCreateGLMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCreateGLMatrix.h; path = classes/CCreateGLMatrix.h; sourceTree = "<group>"; };
 		30F4D83F16AFBB97003903E0 /* CCreateGLMatrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCreateGLMatrix.m; path = classes/CCreateGLMatrix.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -178,6 +182,7 @@
 				3043EF5E16DC8B100081DA6D /* CCommonFont256.m */,
 				3043EF6216DC8C930081DA6D /* CCommonPrintFont.m */,
 				3043EF6616DDE51C0081DA6D /* CCommonMusicPlayer.m */,
+				30B70CA71726724A003DA384 /* CMyDebugMessage.m */,
 			);
 			name = source;
 			sourceTree = "<group>";
@@ -215,6 +220,7 @@
 				3043EF5916DC89090081DA6D /* CCommonFont.h */,
 				3043EF6116DC8C930081DA6D /* CCommonPrintFont.h */,
 				3043EF6516DDE51C0081DA6D /* CCommonMusicPlayer.h */,
+				30B70CA61726724A003DA384 /* CMyDebugMessage.h */,
 			);
 			name = header;
 			sourceTree = "<group>";
@@ -301,6 +307,7 @@
 				3043EF5F16DC8B100081DA6D /* CCommonFont256.h in Headers */,
 				3043EF6316DC8C930081DA6D /* CCommonPrintFont.h in Headers */,
 				3043EF6716DDE51C0081DA6D /* CCommonMusicPlayer.h in Headers */,
+				30B70CA81726724A003DA384 /* CMyDebugMessage.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +390,7 @@
 				3043EF6016DC8B100081DA6D /* CCommonFont256.m in Sources */,
 				3043EF6416DC8C930081DA6D /* CCommonPrintFont.m in Sources */,
 				3043EF6816DDE51C0081DA6D /* CCommonMusicPlayer.m in Sources */,
+				30B70CA91726724A003DA384 /* CMyDebugMessage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

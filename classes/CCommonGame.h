@@ -2,7 +2,7 @@
 //  CGame.h
 //  comike2011win
 //
-//  Created by 山口 慎治 on 12/01/19.
+//  Created by たいにゃん on 12/01/19.
 //  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
 //
 
@@ -77,6 +77,7 @@
 -(void)createMyShader;
 
 -(void)setGameAtPoint:(UIInterfaceOrientation)orientation atPoint:(CGPoint)atPoint;
+-(void)setGameAtPointAll:(CGPoint)atPoint;
 
 -(void)onActive:(BOOL)flag;
 -(void)oniAd:(BOOL)flag;

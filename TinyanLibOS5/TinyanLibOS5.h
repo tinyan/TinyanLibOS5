@@ -2,7 +2,7 @@
 //  TinyanLibOS5.h
 //  TinyanLibOS5
 //
-//  Created by 山口 慎治 on 12/01/01.
+//  Created by たいにゃん on 12/01/01.
 //  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
 //
 

@@ -7,6 +7,8 @@
 //
 
 #import "CCommonAppDelegate.h"
+#import "CMyDebugMessage.h"
+
 //
 //  CAppDelegate.m
 //  ginhagashi
@@ -28,12 +30,12 @@ static CCommonGame* m_game = nil;
 +(void)setGame:(CCommonGame*)lpGame
 {
 	m_game = lpGame;
-	NSLog(@"appdelegate::setGame");
+	[CMyDebugMessage OutputDebugMessage: @"appdelegate::setGame"];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-	NSLog(@"---did finish app launch---");
+	[CMyDebugMessage OutputDebugMessage:@"---did finish app launch---"];
     // Override point for customization after application launch.
     return YES;
 }
@@ -43,14 +45,14 @@ static CCommonGame* m_game = nil;
 	// Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
 	// Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
 	[m_game onActive:NO];
-	NSLog(@"resign active");
+	[CMyDebugMessage OutputDebugMessage:@"resign active"];
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
 	// Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
 	// If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-	NSLog(@"back ground");
+	[CMyDebugMessage OutputDebugMessage:@"back ground"];
 	
 	//	CViewController* controller = (CViewController*)([_window rootViewController]);
 	//	[controller dmy];
@@ -60,20 +62,20 @@ static CCommonGame* m_game = nil;
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
-	NSLog(@"will fore ground");
+	[CMyDebugMessage OutputDebugMessage:@"will fore ground"];
 	// Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-	NSLog(@"did become active");
+	[CMyDebugMessage OutputDebugMessage:@"did become active"];
 	[m_game onActive:YES];
 	// Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
-	NSLog(@"will term");
+	[CMyDebugMessage OutputDebugMessage:@"will term"];
 	// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 

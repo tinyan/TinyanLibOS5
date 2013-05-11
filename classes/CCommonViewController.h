@@ -2,7 +2,7 @@
 //  ViewController.h
 //  lightline
 //
-//  Created by 山口 慎治 on 12/03/06.
+//  Created by たいにゃん on 12/03/06.
 //  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
 //
 

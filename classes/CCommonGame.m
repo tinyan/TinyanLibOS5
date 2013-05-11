@@ -322,6 +322,15 @@
 	
 }
 
+-(void)setGameAtPointAll:(CGPoint)atPoint
+{
+	[self setGameAtPoint:UIInterfaceOrientationLandscapeLeft atPoint:atPoint];
+	[self setGameAtPoint:UIInterfaceOrientationLandscapeRight atPoint:atPoint];
+	[self setGameAtPoint:UIInterfaceOrientationPortrait atPoint:atPoint];
+	[self setGameAtPoint:UIInterfaceOrientationPortraitUpsideDown atPoint:atPoint];
+}
+
+
 -(void)setGameAtPoint:(UIInterfaceOrientation)orientation atPoint:(CGPoint)atPoint
 {
 	if (m_atPointNumber < 4)
