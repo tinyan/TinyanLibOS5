@@ -15,8 +15,9 @@
 {
 
 	CGSize m_size;
+	CGSize m_bufferSizeMax;
 	BOOL m_loadFlag;
-	char* m_ddsHeader;
+	int* m_ddsHeader;
 	int* m_data;
 }
 
@@ -31,7 +32,10 @@
 
 -(CGSize)getSize;
 -(int*)getData;
+-(int*)getHeader;
 
 -(void)dealloc;
 
+//inner
+-(void)checkBufferSize:(int)sizex :(int)sizey;
 @end

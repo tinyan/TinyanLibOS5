@@ -87,6 +87,10 @@
     // Release any cached data, images, etc. that aren't in use.
 }
 
+//
+//6以降はよばれない,かわりに
+//-(NSUInteger)supportedInterfaceOrientations
+//
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
@@ -96,6 +100,9 @@
         return YES;
     }
 }
+
+
+
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
 {

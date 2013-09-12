@@ -28,8 +28,8 @@
 	CTouchToGame* m_touchToGame;
 	CTouchBuffer* m_touchBuffer;
 	CCreateGLMatrix* m_createGLMatrix;
-	CGSize m_mainScreenSize;
-	CGSize m_mainScreenSizeLandscape;
+	CGSize m_deviceScreenSize;
+	CGSize m_deviceScreenSizeLandscape;
 	CGSize m_gameSize;
 	CGSize m_gameAtScreenSize;
 	UIInterfaceOrientation m_rotationType[4];
@@ -48,6 +48,8 @@
 	
 	BOOL m_active;
 	BOOL m_iad;
+	
+//	UIInterfaceOrientation m_interfaceOrientation;
 }
 
 
@@ -60,6 +62,7 @@
 -(CCommonSoundControl*)getSoundControl;
 -(CCommonPrintFont*)getPrintFont;
 
+-(CGSize)getDeviceScreenSize;
 
 -(void)onTimer;
 -(void)onDraw:(UIView *)view drawInRect:(CGRect)rect;

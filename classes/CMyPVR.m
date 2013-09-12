@@ -71,7 +71,7 @@ typedef struct _myPvrHeader
 	
 //	MY_PVR_HEADER header;
 	
-	int readHeaderSize = fread(m_header,sizeof(char),52,file);
+	int readHeaderSize = (int)fread(m_header,sizeof(char),52,file);
 	
 	if (readHeaderSize < 52)
 	{
@@ -80,7 +80,7 @@ typedef struct _myPvrHeader
 	}
 	
 	fseek(file,0,SEEK_END);
-	int fileSize = ftell(file);
+	int fileSize = (int)ftell(file);
 	int dataSize = fileSize - 52;
 	fseek(file,52,SEEK_SET);
 	

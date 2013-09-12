@@ -266,14 +266,14 @@ void* GetOpenALAudioData(CFURLRef inFileURL, NSString* extension,ALsizei *outDat
 	
 	
 	
-	if (err) { printf("GetOpenALAudioData: AudioFileOpenURL FAILED, Error = %ld\n", err); goto Exit; }
+	if (err) { printf("GetOpenALAudioData: AudioFileOpenURL FAILED, Error = %d\n", (int)err); goto Exit; }
 	
 	UInt32 sizeOfASBD					= sizeof (fileFormat);
 	
 	// Get the AudioStreamBasicDescription format for the playback file
 	AudioFileGetProperty (audioFileID,  kAudioFilePropertyDataFormat,
 						  &sizeOfASBD, &fileFormat);
-	if(err) { printf("GetOpenALAudioData: AudioFileGetProperty FAILED, Error = %ld\n", err); goto Exit; }
+	if(err) { printf("GetOpenALAudioData: AudioFileGetProperty FAILED, Error = %d\n", (int)err); goto Exit; }
 	if (fileFormat.mChannelsPerFrame > 2)  { printf("GetOpenALAudioData - Unsupported Format, channel count is greater than stereo\n"); goto Exit;}
 	
 	
@@ -309,10 +309,10 @@ void* GetOpenALAudioData(CFURLRef inFileURL, NSString* extension,ALsizei *outDat
 	SInt64	fileLengthInFrames	= 0;
 	UInt32	propertySize		= sizeof(fileLengthInFrames);
 	err = AudioFileGetProperty(audioFileID, kAudioFilePropertyAudioDataPacketCount, &propertySize, &fileLengthInFrames);
-	if(err) { printf("GetOpenALAudioData: AudioFileGetProperty(kExtAudioFileProperty_FileLengthFrames) FAILED, Error = %ld\n", err); goto Exit; }
+	if(err) { printf("GetOpenALAudioData: AudioFileGetProperty(kExtAudioFileProperty_FileLengthFrames) FAILED, Error = %d\n", (int)err); goto Exit; }
 	
 	// Read all the data into memory
-	UInt32		dataSize	= fileLengthInFrames * outputFormat.mBytesPerFrame;;
+	UInt32		dataSize	= (UInt32)(fileLengthInFrames * outputFormat.mBytesPerFrame);
 //	NSLog(@"dataSize=%d",(int)dataSize);
 	theData					= malloc(dataSize);
 	if (theData)
@@ -354,7 +354,7 @@ void* GetOpenALAudioData(CFURLRef inFileURL, NSString* extension,ALsizei *outDat
 			// failure
 			free (theData);
 			theData = NULL; // make sure to return NULL
-			printf("GetOpenALAudioData: AudioFileReadBytes FAILED, Error = %ld\n", err); goto Exit;
+			printf("GetOpenALAudioData: AudioFileReadBytes FAILED, Error = %d\n", (int)err); goto Exit;
 		}	
 	}
 	

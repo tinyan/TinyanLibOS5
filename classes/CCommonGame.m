@@ -33,9 +33,16 @@
     {
 		m_changeAutoRotateMode = 1;
 		
-		m_mainScreenSize = [[UIScreen mainScreen]bounds].size;
-		m_mainScreenSizeLandscape.width = m_mainScreenSize.height;
-		m_mainScreenSizeLandscape.height = m_mainScreenSize.width;
+		m_deviceScreenSize = [[UIScreen mainScreen]bounds].size;
+		if (m_deviceScreenSize.width > m_deviceScreenSize.height)
+		{
+			float tmp = m_deviceScreenSize.width;
+			m_deviceScreenSize.width = m_deviceScreenSize.height;
+			m_deviceScreenSize.height = tmp;
+		}
+		
+		m_deviceScreenSizeLandscape.width = m_deviceScreenSize.height;
+		m_deviceScreenSizeLandscape.height = m_deviceScreenSize.width;
 		
 //		struct utsname u;
 //        uname(&u);
@@ -140,6 +147,10 @@
 {
 	if (!m_active) return;
 	if (m_iad) return;
+	
+	
+	
+	
 	//
 	CGSize screenSize = [m_touchToGame getScreenSize];
 	float factor = [m_touchToGame getScaleFactor];
@@ -268,6 +279,7 @@
 	{
 		[self calcuNewMatrix:toInterfaceOrientation];
 	}
+//	m_interfaceOrientation = toInterfaceOrientation;
 }
 
 -(void)calcuNewMatrix:(UIInterfaceOrientation)toInterfaceOrientation
@@ -284,15 +296,15 @@
 	}
 	
 	
-	CGSize screenSize = m_mainScreenSize;
+	CGSize screenSize = m_deviceScreenSize;
 	
 	if (toInterfaceOrientation == UIInterfaceOrientationLandscapeLeft)
 	{
-		screenSize = m_mainScreenSizeLandscape;
+		screenSize = m_deviceScreenSizeLandscape;
 	}
 	else if (toInterfaceOrientation == UIInterfaceOrientationLandscapeRight)
 	{
-		screenSize = m_mainScreenSizeLandscape;
+		screenSize = m_deviceScreenSizeLandscape;
 	}
 	else if (toInterfaceOrientation == UIInterfaceOrientationPortrait)
 	{
@@ -339,6 +351,11 @@
 		m_gameAtScreenPoint[m_atPointNumber] = atPoint;
 		m_atPointNumber++;
 	}
+}
+
+-(CGSize)getDeviceScreenSize
+{
+	return m_deviceScreenSize;
 }
 
 //-(void) BinaryPointerCallback:(unsigned char*)buffer size:(CGSize)size next:(int)bytesPerRow

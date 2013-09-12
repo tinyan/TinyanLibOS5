@@ -16,7 +16,11 @@
 
 @interface CCommonBannerViewController : CCommonViewController <ADBannerViewDelegate>
 {
+	int m_type;
 	ADBannerView* m_banner;
 }
+-(void)viewDidLoadWithType:(int)type;
+
+-(void)mySetup;
 
 @end

@@ -264,16 +264,16 @@
 		int getSizeX = needSizeX;
 		if (getSizeX > width)
 		{
-			getSizeX = width;
+			getSizeX = (int)width;
 		}
-		int getStartX = (width - getSizeX) / 2;
+		int getStartX = (int)((width - getSizeX) / 2);
 		
 		int getSizeY = needSizeY;
 		if (getSizeY > height)
 		{
-			getSizeY = height;
+			getSizeY = (int)height;
 		}
-		int getStartY = (height - getSizeY) / 2;
+		int getStartY = (int)((height - getSizeY) / 2);
 		
 		src += 4 * getStartX;
 		src += bytesPerRow * getStartY;
@@ -369,7 +369,7 @@
 		size_t height = CVPixelBufferGetHeight(imageBuffer); 
 
 		
-		[m_callbackObject BinaryPointerCallback:baseAddress size:CGSizeMake(width,height) next:bytesPerRow];
+		[m_callbackObject BinaryPointerCallback:baseAddress size:CGSizeMake(width,height) next:(int)bytesPerRow];
 		
 		CVPixelBufferUnlockBaseAddress(imageBuffer,0); 
 		// CVBufferRelease(imageBuffer); 
@@ -416,7 +416,7 @@
 -(void)changeExposure:(CGPoint)pt
 {
 	NSArray* inputs = m_captureSession.inputs;
-	NSLog(@"device number = %d",inputs.count);
+	NSLog(@"device number = %d",(int)(inputs.count));
 	AVCaptureDeviceInput* inputDevice = (AVCaptureDeviceInput*)[inputs objectAtIndex:0];
 	AVCaptureDevice* device = inputDevice.device;
 	

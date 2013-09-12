@@ -606,8 +606,8 @@ float m_glVersion = 1.1;
 	//CGImageAlphaInfo alfa = CGImageGetAlphaInfo(inputImage);
 	
 	
-	int width = CGImageGetWidth(inputImage);
-	int height = CGImageGetHeight(inputImage);
+	int width = (int)CGImageGetWidth(inputImage);
+	int height = (int)CGImageGetHeight(inputImage);
 	
 	unsigned char* buf = (unsigned char*)malloc(width * height * 4);
 	

@@ -41,7 +41,7 @@
 
 -(void)printMessage:(CGPoint)point size:(CGSize)size message:(char*)message
 {
-	int ln = strlen(message);
+	int ln = (int)strlen(message);
 	CGPoint pt = point;
 	
 	for (int i=0;i<ln;i++)

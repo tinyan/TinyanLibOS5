@@ -57,8 +57,10 @@ typedef struct _iDDSHEAD
 		m_loadFlag = NO;
 		m_size.width = 0;
 		m_size.height = 0;
+		m_bufferSizeMax.width = 0;
+		m_bufferSizeMax.height = 0;
 		m_data = NULL;
-		m_ddsHeader = malloc(128);
+		m_ddsHeader = (int*)malloc(128);
 	}
 	
 	return self;
@@ -71,8 +73,10 @@ typedef struct _iDDSHEAD
 		m_loadFlag = NO;
 		m_size.width = 0;
 		m_size.height = 0;
+		m_bufferSizeMax.width = 0;
+		m_bufferSizeMax.height = 0;
 		m_data = NULL;
-		m_ddsHeader = malloc(128);
+		m_ddsHeader = (int*)malloc(128);
 		
 		m_loadFlag = [self loadDDS:filenameonly];
 	}
@@ -87,8 +91,10 @@ typedef struct _iDDSHEAD
 		m_loadFlag = NO;
 		m_size.width = 0;
 		m_size.height = 0;
+		m_bufferSizeMax.width = 0;
+		m_bufferSizeMax.height = 0;
 		m_data = NULL;
-		m_ddsHeader = malloc(128);
+		m_ddsHeader = (int*)malloc(128);
 
 		m_loadFlag = [self loadDDSZ:filenameonly];
 	}
@@ -103,13 +109,31 @@ typedef struct _iDDSHEAD
 		m_loadFlag = NO;
 		m_size.width = 0;
 		m_size.height = 0;
+		m_bufferSizeMax.width = 0;
+		m_bufferSizeMax.height = 0;
 		m_data = NULL;
-		m_ddsHeader = malloc(128);
+		m_ddsHeader = (int*)malloc(128);
 		
 		m_loadFlag = [self loadDDSZ:filenameonly dir:dir];
 	}
 	
 	return self;
+}
+
+-(void)checkBufferSize:(int)sizex :(int)sizey
+{
+	if (sizex * sizey > m_bufferSizeMax.width * m_bufferSizeMax.height)
+	{
+		if (m_data != NULL)
+		{
+			free(m_data);
+			m_data = NULL;
+		}
+		m_bufferSizeMax.width = sizex;
+		m_bufferSizeMax.height = sizey;
+		
+		m_data = (int*)malloc(sizex*sizey*sizeof(int));
+	}
 }
 
 -(BOOL)loadDDS:(char *)filenameonly
@@ -129,14 +153,10 @@ typedef struct _iDDSHEAD
 		fread(lpddsHeader,sizeof(MYDDS),1,file);
 		int width = lpddsHeader->dwWidth;
 		int height = lpddsHeader->dwHeight;
-		if (m_data != NULL)
-		{
-			free(m_data);
-			m_data = NULL;
-		}
+		[self checkBufferSize:width:height];
+		
 		m_size.width = width;
 		m_size.height = height;
-		m_data = (int*)malloc(width*height*sizeof(int));
 		
 		fread(m_data,sizeof(int),width*height,file);
 		fclose(file);
@@ -198,15 +218,11 @@ typedef struct _iDDSHEAD
 	
 	int width = lpddsHeader->dwWidth;
 	int height = lpddsHeader->dwHeight;
-	if (m_data != NULL)
-	{
-		free(m_data);
-		m_data = NULL;
-	}
+	[self checkBufferSize:width:height];
+	
 	m_size.width = width;
 	m_size.height = height;
 	
-	m_data = (int*)malloc(width*height*sizeof(int)+128);
 	gzread(gzInFile, m_data,width*height*sizeof(int));
 
 	gzclose(gzInFile);
@@ -332,6 +348,10 @@ typedef struct _iDDSHEAD
 	return m_data;
 }
 
+-(int*)getHeader
+{
+	return m_ddsHeader;
+}
 
 -(void)dealloc
 {
