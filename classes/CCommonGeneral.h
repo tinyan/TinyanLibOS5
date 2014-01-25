@@ -16,7 +16,7 @@
 @class CCreateGLMatrix;
 @class CCommonPrintFont;
 
-@interface CCommonGeneral : NSObject <commonGeneralProtocol>
+@interface CCommonGeneraliOS : NSObject <commonGeneralProtocol>
 {
     CCommonGame* m_game;
     CTouchBuffer* m_touchBuffer;

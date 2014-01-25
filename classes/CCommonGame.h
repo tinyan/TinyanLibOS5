@@ -20,7 +20,7 @@
 
 @class CCommonSoundControl;
 
-@class CCommonGeneral;
+@class CCommonGeneraliOS;
 
 
 @interface CCommonGame  : NSObject //<CMyCaptureProtocol>
@@ -40,7 +40,7 @@
 	
 	int m_changeAutoRotateMode;
 	
-    CCommonGeneral* m_general[256];
+    CCommonGeneraliOS* m_general[256];
     int m_gameMode;
 	
     CMyShader* m_shader[256];
@@ -73,6 +73,13 @@
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event view:(UIView*)view;
 -(void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event view:(UIView*)view;
 
+
+-(bool)NNNTouchesBeganGame:(NSSet *)touches withEvent:(UIEvent *)event view:(UIView*)view gamePoint:(CGPoint*)gamePoint;
+-(bool)NNNTouchesMovedGame:(NSSet *)touches withEvent:(UIEvent *)event view:(UIView*)view gamePoint:(CGPoint*)gamePoint preGamePoint:(CGPoint*)gamePoint2;
+-(bool)NNNTouchesEndedGame:(NSSet *)touches withEvent:(UIEvent *)event view:(UIView*)view gamePoint:(CGPoint*)gamePoint preGamePoint:(CGPoint*)gamePoint2;
+-(bool)NNNTtouchesCancelledGame:(NSSet *)touches withEvent:(UIEvent *)event view:(UIView*)view gamePoint:(CGPoint*)gamePoint;
+
+
 -(void)onRotate:(UIInterfaceOrientation)fromInterfaceOrientation from:(UIInterfaceOrientation)fromInterfaceOrientation;
 -(void)willRotate:(UIInterfaceOrientation)toInterfaceOrientation to:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration;
 -(void)calcuNewMatrix:(UIInterfaceOrientation)toInterfaceOrientation;
@@ -85,4 +92,6 @@
 -(void)onActive:(BOOL)flag;
 -(void)oniAd:(BOOL)flag;
 
+//virtual
+-(void)afterPrintGame;
 @end

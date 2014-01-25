@@ -50,9 +50,17 @@ typedef struct _iDDSHEAD
 #define DDPF_RGB  0x00000040 
 */
 
-float m_glVersion = 1.1;
+float m_glVersion = 2.0;
+
+GLuint m_textureUnitTable[]=
+{
+	GL_TEXTURE0,GL_TEXTURE1,GL_TEXTURE2,GL_TEXTURE3,GL_TEXTURE4,GL_TEXTURE5,GL_TEXTURE6,GL_TEXTURE7,
+	GL_TEXTURE8,GL_TEXTURE9,GL_TEXTURE10,GL_TEXTURE11,GL_TEXTURE12,GL_TEXTURE13,GL_TEXTURE14,GL_TEXTURE15
+};
 
 @implementation CMyTexture
+
+
 
 -(id)initBySize:(int)size
 {
@@ -859,9 +867,21 @@ float m_glVersion = 1.1;
 	glEnable(GL_TEXTURE_2D);
 }
 
+-(void)bindTexture:(int)n
+{
+	[self activeTexture:n];
+	glBindTexture(GL_TEXTURE_2D, m_textureNumber);
+	glEnable(GL_TEXTURE_2D);
+}
+
 -(void)activeTexture
 {
-	glActiveTexture(m_textureNumber);//okashii
+	[self activeTexture:0];
+}
+
+-(void)activeTexture:(int)n
+{
+	glActiveTexture(m_textureUnitTable[n]);
 }
 
 

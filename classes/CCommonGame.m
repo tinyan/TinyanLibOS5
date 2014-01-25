@@ -80,12 +80,12 @@
 //dummy rorutine
 -(void)createMyShader
 {
-    m_shader[0] = [[CMyShader alloc]initWithPairName:@"Shader"];
-    [m_shader[0] AddBindAttribLocation:"a_position"];
-    [m_shader[0] AddBindAttribLocation:"a_texCoord"];
-    [m_shader[0] linkProgram];
-	[m_shader[0] AddTextureUniformLocation:"s_texture"];
-	[m_shader[0] AddMatrixUniformLocation:"u_matrix"];
+//    m_shader[0] = [[CMyShader alloc]initWithPairName:@"Shader"];
+  //  [m_shader[0] AddBindAttribLocation:"a_position"];
+//    [m_shader[0] AddBindAttribLocation:"a_texCoord"];
+//    [m_shader[0] linkProgram];
+//	[m_shader[0] AddTextureUniformLocation:"s_texture"];
+//	[m_shader[0] AddMatrixUniformLocation:"u_matrix"];
 
 }
 
@@ -163,8 +163,13 @@
 	glBlendFunc(GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHA);
     
     [m_general[m_gameMode] GeneralPrint];
+	[self afterPrintGame];
 }
 
+//virtual
+-(void)afterPrintGame
+{
+}
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event view:(UIView*)view
 {
@@ -182,7 +187,10 @@
 			*(gamePoint+i) = pt2;
 		}
 
-		[m_general[m_gameMode] NNNTouchesBegan:touches withEvent:event view:view gamePoint:gamePoint];
+		if (![self NNNTouchesBeganGame:touches withEvent:event view:view gamePoint:gamePoint])
+		{
+			[m_general[m_gameMode] NNNTouchesBegan:touches withEvent:event view:view gamePoint:gamePoint];
+		}
 		
 		free(gamePoint);
 	}
@@ -232,8 +240,11 @@
 			
 		}
 		
-		[m_general[m_gameMode] NNNTouchesMoved:touches withEvent:event view:view gamePoint:gamePoint preGamePoint:gamePoint2];
-																											
+		if (![self NNNTouchesMovedGame:touches withEvent:event view:view gamePoint:gamePoint preGamePoint:gamePoint2])
+		{
+			[m_general[m_gameMode] NNNTouchesMoved:touches withEvent:event view:view gamePoint:gamePoint preGamePoint:gamePoint2];
+		}
+								
 		free(gamePoint2);
 		free(gamePoint);
 	}
@@ -246,16 +257,26 @@
 	if (allTouch.count > 0)
 	{
 		CGPoint* gamePoint = (CGPoint*)malloc(sizeof(CGPoint) * allTouch.count);
+		CGPoint* gamePoint2 = (CGPoint*)malloc(sizeof(CGPoint) * allTouch.count);
+		
 		for (int i=0;i<allTouch.count;i++)
 		{
 			UITouch* touch = [allTouch objectAtIndex:i];
 			CGPoint pt = [touch locationInView:view];
 			CGPoint pt2 = [m_touchToGame screenToGame:pt];
 			*(gamePoint+i) = pt2;
+			CGPoint pt3 = [touch previousLocationInView:view];
+			CGPoint pt4 = [m_touchToGame screenToGame:pt3];
+			*(gamePoint2 + i) = pt4;
+			
 		}
 		
-		[m_general[m_gameMode] NNNTouchesEnded:touches withEvent:event view:view gamePoint:gamePoint];
+		if (![self NNNTouchesEndedGame:touches withEvent:event view:view gamePoint:gamePoint preGamePoint:gamePoint2])
+		{
+			[m_general[m_gameMode] NNNTouchesEnded:touches withEvent:event view:view gamePoint:gamePoint preGamePoint:gamePoint2];
+		}
 		
+		free(gamePoint2);
 		free(gamePoint);
 	}
 
@@ -264,6 +285,29 @@
 -(void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event view:(UIView*)view
 {
 }
+
+
+//if proceed return YES
+-(bool)NNNTouchesBeganGame:(NSSet *)touches withEvent:(UIEvent *)event view:(UIView*)view gamePoint:(CGPoint*)gamePoint
+{
+	return NO;
+}
+
+-(bool)NNNTouchesMovedGame:(NSSet *)touches withEvent:(UIEvent *)event view:(UIView*)view gamePoint:(CGPoint*)gamePoint preGamePoint:(CGPoint*)gamePoint2
+{
+	return NO;
+}
+
+-(bool)NNNTouchesEndedGame:(NSSet *)touches withEvent:(UIEvent *)event view:(UIView*)view gamePoint:(CGPoint*)gamePoint preGamePoint:(CGPoint*)gamePoint2
+{
+	return NO;
+}
+
+-(bool)NNNTtouchesCancelledGame:(NSSet *)touches withEvent:(UIEvent *)event view:(UIView*)view gamePoint:(CGPoint*)gamePoint
+{
+	return NO;
+}
+
 
 -(void)willRotate:(UIInterfaceOrientation)fromInterfaceOrientation to:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {

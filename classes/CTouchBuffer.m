@@ -24,6 +24,7 @@
     return self;
 }
 
+
 -(void)clear
 {
     m_number = 0;

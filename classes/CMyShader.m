@@ -8,6 +8,12 @@
 
 #import "CMyShader.h"
 
+#import "defaultShaderName.h"
+
+#import "CDefaultShaderFill.h"
+#import "CDefaultShaderBlt.h"
+#import "CDefaultShaderTransBlt.h"
+
 
 @implementation CMyShader
 
@@ -32,12 +38,227 @@
 	return self;
 }
 
+-(id)initWithShaderNumber:(int)n vshader:(char*)vshaderSource fshader:(char*)fshaderSource
+{
+	self = [super init];
+	
+	if (self)
+	{
+		m_shaderNumber = n;
+		[self createProgramWithShaderList:vshaderSource :fshaderSource];
+	}
+	
+	return self;
+}
+
++(id)createDefaultShader:(int)n
+{
+	if (n == SHADER_FILL) return [[CDefaultShaderFill alloc]init];
+	if (n == SHADER_BLT) return [[CDefaultShaderBlt alloc]init];
+	if (n == SHADER_TRANSBLT) return [[CDefaultShaderTransBlt alloc]init];
+	
+	return Nil;
+}
+
+
 
 -(GLuint)getProgram
 {
 	return m_program;
 }
 
+-(GLuint)createProgramWithShaderList:(char*)vertexShaderList :(char*)fragmentShaderList
+//-(GLuint)createProgramWithShaderName:(NSString*)vertexShaderName :(NSString*)fragmentShaderName
+{
+	//    m_vertexShaderName = vertexShaderName;
+	//  m_fragmentShaderName = fragmentShaderName;
+    
+	//    NSString* vertShaderPathname;
+	//    NSString* fragShaderPathname;
+	
+    m_program = glCreateProgram();
+	if (m_program == 0)
+    {
+        NSLog(@"Failed create program error");
+        return 0;
+    }
+	
+	
+	//    vertShaderPathname = [[NSBundle mainBundle] pathForResource:vertexShaderName ofType:@"vsh"];
+	m_vertexShader = [self compileShaderMemory:GL_VERTEX_SHADER list:vertexShaderList];
+	if (m_vertexShader == 0)
+    {
+        NSLog(@"Failed to compile vertex shader");
+        return FALSE;
+    }
+	
+	
+	//    fragShaderPathname = [[NSBundle mainBundle] pathForResource:fragmentShaderName ofType:@"fsh"];
+	m_fragmentShader = [self compileShaderMemory:GL_FRAGMENT_SHADER list:fragmentShaderList];
+	if (m_fragmentShader == 0)
+    {
+		glDeleteShader(m_vertexShader);
+		
+        NSLog(@"Failed to compile fragment shader");
+        return FALSE;
+    }
+	
+	
+    // Attach vertex shader to program
+    glAttachShader(m_program, m_vertexShader);
+	
+    // Attach fragment shader to program
+    glAttachShader(m_program, m_fragmentShader);
+	
+	//	glDeleteShader(m_vertexShader);
+	//	glDeleteShader(m_fragmentShader);
+	
+	
+	
+	/*
+	 // Bind attribute locations
+	 // this needs to be done prior to linking
+	 glBindAttribLocation(program, ATTRIB_VERTEX, "position");
+	 glBindAttribLocation(program, ATTRIB_COLOR, "color");
+	 
+	 // Link program
+	 if (![self linkProgram:program])
+	 {
+	 NSLog(@"Failed to link program: %d", program);
+	 
+	 if (vertShader)
+	 {
+	 glDeleteShader(vertShader);
+	 vertShader = 0;
+	 }
+	 if (fragShader)
+	 {
+	 glDeleteShader(fragShader);
+	 fragShader = 0;
+	 }
+	 if (program)
+	 {
+	 glDeleteProgram(program);
+	 program = 0;
+	 }
+	 
+	 return FALSE;
+	 }
+	 
+	 // Get uniform locations
+	 uniforms[UNIFORM_TRANSLATE] = glGetUniformLocation(program, "translate");
+	 
+	 // Release vertex and fragment shaders
+	 if (vertShader)
+	 glDeleteShader(vertShader);
+	 if (fragShader)
+	 glDeleteShader(fragShader);
+	 */
+	
+	return m_program;
+}
+
+-(GLuint)compileShaderMemory:(GLenum)type list:(const char *)list;
+//-(GLuint)compileShader:(GLenum)type file:(NSString *)file;
+//- (BOOL)compileShader:(GLuint *)shader type:(GLenum)type file:(NSString *)file
+{
+    GLint status;
+	//    const GLchar *source;
+	GLuint shader;
+	
+	//NSStringEncoding encoding;
+	//	NSError* error;
+	//	NSString* str = [NSString stringWithContentsOfFile:file encoding:NSUTF8StringEncoding error:nil];
+	//  source = (GLchar *)[str UTF8String];
+	//    source = (GLchar *)[[NSString stringWithContentsOfFile:file usedEncoding:&encoding error:nil] UTF8String];
+    //source = (GLchar *)[[NSString stringWithContentsOfFile:file encoding:NSASCIIStringEncoding  error:nil] UTF8String];
+	
+	/*
+	 const char* filename = [file UTF8String];
+	 FILE* files = fopen(filename,"rb");
+	 if (files != NULL)
+	 {
+	 fseek(files,0,SEEK_END);
+	 int ln = ftell(files);
+	 fseek(files,0,SEEK_SET);
+	 source = (GLchar*)malloc(ln+1);
+	 fread(source,sizeof(char),ln,files);
+	 fclose(files);
+	 source[ln] = 0;
+	 NSLog(@"open file start size=%d %s",ln,filename);
+	 }
+	 else
+	 {
+	 NSLog(@"open error %s",filename);
+	 }
+	 */
+	
+	
+	
+	//    if (!source)
+	//  {
+	//        NSLog(@"Failed to load shader");
+	//        return 0;
+	//    }
+	
+	//	NSLog(@"source size = %d %s",strlen(source),source);
+	
+	//	NSLog(@"encode = %d",encoding);
+	
+	//	printf("[[[[[list=%s]]]]]",list);
+	
+    shader = glCreateShader(type);
+	if (shader == 0) return 0;
+	
+	//	int ln = strlen(source) + 1;
+	//    glShaderSource(shader, 1, &source, NULL);
+	int ln = (int)strlen(list);
+	glShaderSource(shader, 1, &list, &ln);
+	
+	
+    glCompileShader(shader);
+	
+	//	free(source);
+	
+	//#if defined(DEBUG)
+	/*
+	 GLint logLength;
+	 glGetShaderiv(shader, GL_INFO_LOG_LENGTH, &logLength);
+	 if (logLength > 0)
+	 {
+	 GLchar *log = (GLchar *)malloc(logLength);
+	 glGetShaderInfoLog(shader, logLength, &logLength, log);
+	 NSLog(@"Shader compile log:\n%s", log);
+	 free(log);
+	 }
+	 */
+	//#endif
+	
+    glGetShaderiv(shader, GL_COMPILE_STATUS, &status);
+    if (status == 0)
+    {
+		
+		GLint infoLen = 0;
+		glGetShaderiv(shader, GL_INFO_LOG_LENGTH, &infoLen);
+		if (infoLen > 0)
+		{
+			printf("[[[[[list=%s]]]]]",list);
+			
+			char* infoLog = malloc(sizeof(char) * infoLen);
+			glGetShaderInfoLog(shader, infoLen, NULL,infoLog);
+			NSLog(@"Error compile shader:\n%s", infoLog);
+			free(infoLog);
+			
+		}
+		
+		
+		
+        glDeleteShader(shader);
+        return 0;
+    }
+	
+    return shader;
+}
 
 -(GLuint)createProgramWithShaderName:(NSString*)vertexShaderName :(NSString*)fragmentShaderName
 {
@@ -456,6 +677,13 @@
     
 }
 
+-(void)beforeProgram
+{
+}
+
+-(void)afterProgram
+{
+}
 
 -(void)printErrorUniformLocation:(char*) name
 {

@@ -130,7 +130,7 @@
 	
 	float touchX = point.x;
 	float touchY = point.y;
-	
+//	printf("screen to game[%f %f]",touchX,touchY);
 	if (m_touchAngle != 0.0f)
 	{
 		//turn
@@ -144,13 +144,16 @@
 		touchY = yy + m_touchCenterY;
 	}
 
+//	printf("s[%f %f]",touchX,touchY);
 	touchX -= m_gameAtScreenRect.origin.x;
 	touchY -= m_gameAtScreenRect.origin.y;
+//	printf("[%f %f]",touchX,touchY);
 
 	touchX *= m_gameSize.width;
 	touchX /= m_gameAtScreenRect.size.width;
 	touchY *= m_gameSize.height;
 	touchY /= m_gameAtScreenRect.size.height;
+//	printf("[%f %f]¥n",touchX,touchY);
 
 	pt.x = touchX;
 	pt.y = touchY;

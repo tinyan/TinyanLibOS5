@@ -147,7 +147,7 @@ float m_maxScaleFactor = -1.0f;
 	}
 	else 
 	{
-		if (strcmp(u.machine,"iPad3,5") >= 0)
+		if (strcmp(u.machine,"iPad3,4") >= 0)
 		{
             m_model= MY_MODEL_IPAD4;
 //            NSLog(@"machine = retina ipad (4th)");

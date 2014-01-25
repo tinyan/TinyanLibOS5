@@ -23,6 +23,7 @@
 
 @interface CMyShader : NSObject 
 {
+	int m_shaderNumber;
 	GLuint m_program;
 	GLuint m_vertexShader;
 	GLuint m_fragmentShader;
@@ -42,12 +43,18 @@
 
 -(id)initWithShaderName:(NSString*)vertexShaderName :(NSString*)fragmentShaderName;
 -(id)initWithPairName:(NSString*)shaderName;
+-(id)initWithShaderNumber:(int)n vshader:(char*)vshaderSource fshader:(char*)fshaderSource;
++(id)createDefaultShader:(int)n;
+
 -(GLuint)getProgram;
 -(GLuint)linkProgram;
 
 //
 -(GLuint)compileShader:(GLenum)type file:(NSString *)file;
+-(GLuint)compileShaderMemory:(GLenum)type list:(const char *)list;
+
 -(GLuint)createProgramWithShaderName:(NSString*)vertexShaderName :(NSString*)fragmentShaderName;
+-(GLuint)createProgramWithShaderList:(char*)vertexShaderList :(char*)fragmentShaderList;
 
 -(GLint)AddBindAttribLocation:(char*)name;
 
@@ -78,6 +85,9 @@
 
 -(void)printErrorUniformLocation:(char*) name;
 
+//virtual
+-(void)beforeProgram;
+-(void)afterProgram;
 
 
 

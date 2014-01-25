@@ -13,7 +13,7 @@
 #import "CCommonGame.h"
 #import "CCommonFont.h"
 
-@implementation CCommonGeneral
+@implementation CCommonGeneraliOS
 
 -(id)init:(CCommonGame*)lpGame
 {
@@ -64,7 +64,7 @@
 {
 }
 
--(void)NNNTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event view:(UIView*)view gamePoint:(CGPoint*)gamePoint
+-(void)NNNTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event view:(UIView*)view gamePoint:(CGPoint*)gamePoint preGamePoint:(CGPoint*)gamePoint2
 {
 }
 

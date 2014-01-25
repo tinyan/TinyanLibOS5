@@ -14,6 +14,7 @@
 #import <OpenGLES/ES2/gl.h>
 #import <OpenGLES/ES2/glext.h>
 
+
 //#import <zlib.h>
 
 //#import <OpenGLES/ES2/gl.h>
@@ -65,7 +66,9 @@
 -(CGPoint) xy2uv:(CGPoint)pt;
 
 -(void)bindTexture;
+-(void)bindTexture:(int)n;
 -(void)activeTexture;
+-(void)activeTexture:(int)n;
 -(GLuint)getTextureNumber;
 
 -(void)setScreenSize:(CGSize)size;
